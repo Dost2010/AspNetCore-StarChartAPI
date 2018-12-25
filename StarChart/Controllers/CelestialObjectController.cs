@@ -29,7 +29,7 @@ namespace StarChart.Controllers
 
         }
         [HttpGet("{name}")]
-        public IActionResult GetbyName(string name)
+        public IActionResult GetByName(string name)
         {
             var co = _context.CelestialObjects.Where(e => e.Name == name).ToList();
 
@@ -43,7 +43,7 @@ namespace StarChart.Controllers
         }
 
         [HttpGet("")]
-        public IActionResult GetAll ()
+        public IActionResult GetAll()
         {
             var co = _context.CelestialObjects.ToList();
             foreach (var c in co)
